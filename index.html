@@ -135,7 +135,7 @@
             <div class="corner-decor bottom-left"></div>
             
             <div id="lockOverlay">
-                <span id="statusEmoji">LOCK</span>
+                <span id="statusEmoji">LOCK😍</span>
                 <input type="password" id="passInput" placeholder="ENTER PASSWORD">
                 <br>
                 <button class="unlock-btn" onclick="verifyPass()">UNLOCK</button>
@@ -170,17 +170,17 @@
         const input = document.getElementById('passInput');
         const emoji = document.getElementById('statusEmoji');
         
-        //     
+        // পাসওয়ার্ড এখানে পরিবর্তন করা হয়েছে
         if(input.value === "VIP99") {
             document.getElementById('lockOverlay').style.display = 'none';
             document.getElementById('signalContent').style.display = 'flex';
             startSync();
         } else {
-            emoji.innerText = "";
+            emoji.innerText = "😡";
             input.value = "";
             input.style.borderColor = "#ff0055";
             setTimeout(() => { 
-                emoji.innerText = "LOCK"; 
+                emoji.innerText = "LOCK😍"; 
                 input.style.borderColor = "#00ffcc";
             }, 2000);
         }
@@ -229,7 +229,7 @@
             const win = Math.random() > 0.4;
             typeEl.innerText = win ? "WINNER" : "LOSE";
             typeEl.style.color = win ? "#00ff00" : "#ff0055";
-            numEl.innerHTML = win ? "" : "";
+            numEl.innerHTML = win ? "🤩" : "😢";
 
             setTimeout(() => {
                 ring.classList.remove("ring-action");

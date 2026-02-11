@@ -6,10 +6,11 @@
     <title>amar club Cyber X</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html { height: 100%; overflow: hidden; background: #000; font-family: 'Segoe UI', Roboto, sans-serif; }
+        /* এখানে উচ্চতা ঠিক করার জন্য dvh ব্যবহার করা হয়েছে যাতে ব্রাউজারে কেটে না যায় */
+        body, html { height: 100%; height: 100dvh; overflow: hidden; background: #000; font-family: 'Segoe UI', Roboto, sans-serif; }
 
         /* --- LOGIN PAGE --- */
-        #loginPage { display: flex; justify-content: center; align-items: center; height: 100vh; background: radial-gradient(circle, #220000 0%, #000 100%); position: absolute; width: 100%; z-index: 40000; }
+        #loginPage { display: flex; justify-content: center; align-items: center; height: 100%; height: 100dvh; background: radial-gradient(circle, #220000 0%, #000 100%); position: absolute; width: 100%; z-index: 40000; }
         .login-box { width: 310px; padding: 30px 25px; background: rgba(15, 15, 15, 0.9); border: 1px solid #ffcc00; text-align: center; border-radius: 20px; box-shadow: 0 0 20px rgba(255, 204, 0, 0.2); }
         .btn-main { background: linear-gradient(45deg, #ffcc00, #ff9900); border: none; padding: 14px; width: 100%; color: #000; font-weight: 900; border-radius: 10px; cursor: pointer; margin-bottom: 15px; font-size: 16px; display: block; text-decoration: none; }
         .btn-telegram { background: #0088cc; color: #fff; border: none; padding: 12px; width: 100%; font-weight: bold; border-radius: 10px; cursor: pointer; text-decoration: none; display: block; font-size: 14px; }
@@ -114,7 +115,7 @@
         }
         .unlock-btn:active { transform: scale(0.9); }
 
-        #gamePage { display: none; height: 100vh; width: 100vw; position: relative; }
+        #gamePage { display: none; height: 100%; height: 100dvh; width: 100vw; position: relative; }
         iframe { width: 100%; height: 100%; border: none; }
     </style>
 </head>
@@ -170,7 +171,6 @@
         const input = document.getElementById('passInput');
         const emoji = document.getElementById('statusEmoji');
         
-        // পাসওয়ার্ড এখানে পরিবর্তন করা হয়েছে
         if(input.value === "VIP99") {
             document.getElementById('lockOverlay').style.display = 'none';
             document.getElementById('signalContent').style.display = 'flex';
